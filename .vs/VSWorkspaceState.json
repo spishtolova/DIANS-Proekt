@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Домашна 2",
-    "\\Домашна 2\\ArtNavigate"
+    "\\Домашна 2\\ArtNavigate",
+    "\\Домашна 2\\ArtNavigate\\ArtNavigate",
+    "\\Домашна 2\\ArtNavigate\\ArtNavigate\\Views",
+    "\\Домашна 2\\ArtNavigate\\ArtNavigate\\Views\\Shared"
   ],
-  "SelectedNode": "\\Домашна 2\\ArtNavigate\\ArtNavigate.sln",
+  "SelectedNode": "\\Домашна 2\\ArtNavigate\\ArtNavigate\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }
