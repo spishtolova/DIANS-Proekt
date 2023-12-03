@@ -18,10 +18,9 @@ namespace ArtNavigate.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: ArtGaleries
-        public ActionResult Index(string search)
+        public ActionResult Index()
         {
-            var galeries = db.ArtGaleries.Where(x => x.Name.Contains(search) || search == null).ToList();
-            return View(galeries);
+            return View(db.ArtGaleries.ToList());
         }
         public ActionResult Import()
         {
