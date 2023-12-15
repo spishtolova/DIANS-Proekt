@@ -23,6 +23,11 @@ namespace ArtNavigate.Controllers
             var galeries = db.ArtGaleries.Where(x => x.Name.Contains(search) || search == null).ToList();
             return View(galeries);
         }
+        public ActionResult IndexEnglish(string search)
+        {
+            var galeries = db.ArtGaleries.Where(x => x.NameEnglish.Contains(search) || search == null).ToList();
+            return View(galeries);
+        }
         public ActionResult Import()
         {
             return View();
@@ -83,6 +88,19 @@ namespace ArtNavigate.Controllers
 
         // GET: ArtGaleries/Details/5
         public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ArtGalery artGalery = db.ArtGaleries.Find(id);
+            if (artGalery == null)
+            {
+                return HttpNotFound();
+            }
+            return View(artGalery);
+        }
+        public ActionResult DetailsEnglish(int? id)
         {
             if (id == null)
             {

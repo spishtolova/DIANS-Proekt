@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ArtNavigate.Models.ArtGalery>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEnglish.cshtml";
+}
+
+<h2>Galeries</h2>
+@using (Html.BeginForm("Index", "ArtGaleries", FormMethod.Get, new { @class = "d-flex" }))
+{
+    @Html.TextBox("search", null, new { @class = "form-control border-end-0 border bg-light rounded-2", @placeholder = "search..." })
+
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameEnglish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdressEnglish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CityEnglish)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameEnglish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdressEnglish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityEnglish)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "DetailsEnglish", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
