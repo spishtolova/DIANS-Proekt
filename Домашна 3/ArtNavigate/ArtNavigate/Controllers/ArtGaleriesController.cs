@@ -65,7 +65,10 @@ namespace ArtNavigate.Controllers
                         Latitude = float.Parse(worksheet.Cells[row, 6].Value.ToString()) ,
                         Longtitude = float.Parse(worksheet.Cells[row, 7].Value.ToString()),
                         Description = worksheet.Cells[row, 8].Value.ToString(),
-                        
+                        NameEnglish = worksheet.Cells[row, 9].Value.ToString(),
+                        AdressEnglish = worksheet.Cells[row, 10].Value.ToString(),
+                        CityEnglish = worksheet.Cells[row, 11].Value.ToString(),
+
                     };
 
                     // Save the product to the database (you need to implement this)
@@ -169,6 +172,7 @@ namespace ArtNavigate.Controllers
         {
             ArtGalery artGalery = db.ArtGaleries.Find(id);
             db.ArtGaleries.Remove(artGalery);
+            
             db.SaveChanges();
             return RedirectToAction("Index");
         }

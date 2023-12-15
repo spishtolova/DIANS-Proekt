@@ -16,6 +16,13 @@ namespace ArtNavigate.Models
         public string Description { get; set; }
         public float Latitude { get; set; }
         public float Longtitude { get; set; }
+        public string NameEnglish { get; set; }
+        
+
+        public string AdressEnglish { get; set; }
+        public string CityEnglish { get; set; }
+
+
 
     }
 }
