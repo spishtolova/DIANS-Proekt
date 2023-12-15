@@ -2,11 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\Домашна 2",
-    "\\Домашна 2\\ArtNavigate",
-    "\\Домашна 2\\ArtNavigate\\ArtNavigate",
-    "\\Домашна 2\\ArtNavigate\\ArtNavigate\\Views",
-    "\\Домашна 2\\ArtNavigate\\ArtNavigate\\Views\\Shared"
+    "\\Домашна 3",
+    "\\Домашна 3\\ArtNavigate",
+    "\\Домашна 3\\ArtNavigate\\ArtNavigate",
+    "\\Домашна 3\\ArtNavigate\\ArtNavigate\\Views",
+    "\\Домашна 3\\ArtNavigate\\ArtNavigate\\Views\\ArtGaleries",
+    "\\Домашна 3\\ArtNavigate\\ArtNavigate\\Views\\Home"
   ],
-  "SelectedNode": "\\Домашна 2\\ArtNavigate\\ArtNavigate\\Views\\Shared\\_Layout.cshtml",
+  "SelectedNode": "\\Домашна 3\\ArtNavigate\\ArtNavigate\\Views\\ArtGaleries\\Import.cshtml",
   "PreviewInSolutionExplorer": false
 }
