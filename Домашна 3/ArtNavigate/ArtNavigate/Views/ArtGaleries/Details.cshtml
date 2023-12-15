@@ -12,7 +12,7 @@
         <hr />
         <h4>Адреса: @Model.Adress</h4>
         <h4>Град: @Model.City</h4>
-            
+
 
 
     </div>
@@ -22,7 +22,7 @@
 
 
 
-    
+
 
 
 </div>
@@ -34,7 +34,8 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.79.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 <script>
     // Initialize the map
     var map = L.map('map').setView(['@Model.Latitude', '@Model.Longtitude'], 13);
@@ -43,7 +44,7 @@
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
-
+    L.control.locate().addTo(map);
     // Add a marker to the map
     L.marker(['@Model.Latitude', '@Model.Longtitude']).addTo(map)
         .bindPopup('@Model.Name')
