@@ -412,6 +412,10 @@
     <Content Include="Views\ArtGaleries\Edit.cshtml" />
     <Content Include="Views\ArtGaleries\Index.cshtml" />
     <Content Include="Views\ArtGaleries\Import.cshtml" />
+    <Content Include="Views\Shared\_LayoutEnglish.cshtml" />
+    <Content Include="Views\ArtGaleries\IndexEnglish.cshtml" />
+    <Content Include="Views\Home\IndexEnglish.cshtml" />
+    <Content Include="Views\ArtGaleries\DetailsEnglish.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

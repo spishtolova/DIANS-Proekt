@@ -1,0 +1,53 @@
+﻿@model ArtNavigate.Models.ArtGalery
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutEnglish.cshtml";
+
+}
+
+
+
+<div class="row" style="margin-top:4em">
+    <div class="col-md-6">
+        <h1>@Model.NameEnglish</h1>
+        <hr />
+        <h4>Adress: @Model.AdressEnglish</h4>
+        <h4>City: @Model.CityEnglish</h4>
+
+
+
+    </div>
+    <div class="col-md-6">
+        <div id="map" style="height: 400px;"></div>
+    </div>
+
+
+
+
+
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "IndexEnglish")
+</p>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+<script>
+    // Initialize the map
+    var map = L.map('map').setView(['@Model.Latitude', '@Model.Longtitude'], 13);
+
+    // Add a tile layer (you can choose a different tile provider)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add a marker to the map
+    L.marker(['@Model.Latitude', '@Model.Longtitude']).addTo(map)
+        .bindPopup('@Model.Name')
+        .openPopup();
+</script>
