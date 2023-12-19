@@ -31,5 +31,7 @@ namespace ArtNavigate.Models
         }
 
         public System.Data.Entity.DbSet<ArtNavigate.Models.ArtGalery> ArtGaleries { get; set; }
+
+        public System.Data.Entity.DbSet<ArtNavigate.Models.ArtPieces> ArtPieces { get; set; }
     }
 }

@@ -1,0 +1,14 @@
+﻿@model ArtNavigate.Models.GaleryArtPiece
+@{
+    ViewBag.Title = "AddGalery";
+}
+
+<h2>Add an art piece to a galery</h2>
+@using (Html.BeginForm("AddGalery", "ArtPieces"))
+{
+    <div class="form-group">
+        @Html.DropDownListFor(m => m.artGaleriyId, new SelectList(Model.artGalery, "Id", "Name"), new { @class = "form-control" })
+        @Html.HiddenFor(m => m.artPieceId)
+        <button class="btn btn-outline-primary btn-sm mt-3 text-light" type="submit">Add</button>
+    </div>
+}

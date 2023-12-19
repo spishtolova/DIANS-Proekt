@@ -28,6 +28,28 @@
 
 
 </div>
+<div class="row text-center" style="margin-top:10px">
+    <h3>Art pieces in this galery</h3>
+</div>
+<div class="row">
+
+    @foreach (var item in Model.artPieces)
+    {
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="@item.imageURL" width="200px" height="200px" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <p class="card-text">@item.nameEnglish</p>
+                    <p class="card-text">од: @item.artistName</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    }
+
+</div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "IndexEnglish")
