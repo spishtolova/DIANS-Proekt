@@ -28,6 +28,17 @@ namespace ArtNavigate.Controllers
             var galeries = db.ArtGaleries.Where(x => x.NameEnglish.Contains(search) || x.AdressEnglish.Contains(search) || x.CityEnglish.Contains(search) || search == null).ToList();
             return View(galeries);
         }
+        public ActionResult Help()
+        {
+            
+            return View();
+        }
+        public ActionResult HelpEnglish()
+        {
+
+            return View();
+        }
+
         public ActionResult Import()
         {
             return View();
