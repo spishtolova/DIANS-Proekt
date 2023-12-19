@@ -20,12 +20,12 @@ namespace ArtNavigate.Controllers
         // GET: ArtGaleries
         public ActionResult Index(string search)
         {
-            var galeries = db.ArtGaleries.Where(x => x.Name.Contains(search) || search == null).ToList();
+            var galeries = db.ArtGaleries.Where(x => x.Name.Contains(search) || x.Adress.Contains(search) || x.City.Contains(search)  || search == null).ToList();
             return View(galeries);
         }
         public ActionResult IndexEnglish(string search)
         {
-            var galeries = db.ArtGaleries.Where(x => x.NameEnglish.Contains(search) || search == null).ToList();
+            var galeries = db.ArtGaleries.Where(x => x.NameEnglish.Contains(search) || x.AdressEnglish.Contains(search) || x.CityEnglish.Contains(search) || search == null).ToList();
             return View(galeries);
         }
         public ActionResult Import()
