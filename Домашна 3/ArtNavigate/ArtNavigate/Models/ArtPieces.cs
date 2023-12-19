@@ -10,11 +10,11 @@ namespace ArtNavigate.Models
     {
         [Key]
         public int id { get; set; }
-        public int name { get; set; }
-        public int nameEnglish { get; set; }
-        public int imageURL { get; set; }
-        public int artistName { get; set; }
-
+        public string name { get; set; }
+        public string nameEnglish { get; set; }
+        public string imageURL { get; set; }
+        public string artistName { get; set; }
+        
         public ArtGalery artGalery { get; set; }
     }
 }

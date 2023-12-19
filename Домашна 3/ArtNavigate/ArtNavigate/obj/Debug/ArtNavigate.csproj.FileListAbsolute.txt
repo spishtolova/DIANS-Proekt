@@ -736,3 +736,7 @@ C:\Users\andre\Source\Repos\DIANS-Proekt\Домашна 3\ArtNavigate\ArtNavigat
 C:\Users\andre\Source\Repos\DIANS-Proekt\Домашна 3\ArtNavigate\ArtNavigate\obj\Debug\ArtNavigate.pdb
 C:\Users\andre\Source\Repos\DIANS-Proekt\Домашна 3\ArtNavigate\ArtNavigate\obj\Debug\ArtNavigate.Migrations.init2.resources
 C:\Users\andre\Source\Repos\DIANS-Proekt\Домашна 3\ArtNavigate\ArtNavigate\obj\Debug\ArtNavigate.Migrations.init3.resources
+C:\Users\andre\Source\Repos\DIANS-Proekt\Домашна 3\ArtNavigate\ArtNavigate\obj\Debug\ArtNavigate.Migrations.init4.resources
+C:\Users\andre\Source\Repos\DIANS-Proekt\Домашна 3\ArtNavigate\ArtNavigate\obj\Debug\ArtNavigate.Migrations.init5.resources
+C:\Users\andre\Source\Repos\DIANS-Proekt\Домашна 3\ArtNavigate\ArtNavigate\obj\Debug\ArtNavigate.Migrations.init6.resources
+C:\Users\andre\Source\Repos\DIANS-Proekt\Домашна 3\ArtNavigate\ArtNavigate\obj\Debug\ArtNavigate.Migrations.init7.resources

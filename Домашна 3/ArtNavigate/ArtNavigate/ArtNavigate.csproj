@@ -316,6 +316,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArtGaleriesController.cs" />
+    <Compile Include="Controllers\ArtPiecesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -337,10 +338,27 @@
     <Compile Include="Migrations\202312151411143_init3.Designer.cs">
       <DependentUpon>202312151411143_init3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312191318543_init4.cs" />
+    <Compile Include="Migrations\202312191318543_init4.Designer.cs">
+      <DependentUpon>202312191318543_init4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312191324318_init5.cs" />
+    <Compile Include="Migrations\202312191324318_init5.Designer.cs">
+      <DependentUpon>202312191324318_init5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312191340434_init6.cs" />
+    <Compile Include="Migrations\202312191340434_init6.Designer.cs">
+      <DependentUpon>202312191340434_init6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202312191349428_init7.cs" />
+    <Compile Include="Migrations\202312191349428_init7.Designer.cs">
+      <DependentUpon>202312191349428_init7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ArtGalery.cs" />
     <Compile Include="Models\ArtPieces.cs" />
+    <Compile Include="Models\GaleryArtPiece.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -417,6 +435,12 @@
     <Content Include="Views\ArtGaleries\IndexEnglish.cshtml" />
     <Content Include="Views\Home\IndexEnglish.cshtml" />
     <Content Include="Views\ArtGaleries\DetailsEnglish.cshtml" />
+    <Content Include="Views\ArtPieces\Create.cshtml" />
+    <Content Include="Views\ArtPieces\Delete.cshtml" />
+    <Content Include="Views\ArtPieces\Details.cshtml" />
+    <Content Include="Views\ArtPieces\Edit.cshtml" />
+    <Content Include="Views\ArtPieces\Index.cshtml" />
+    <Content Include="Views\ArtPieces\AddGalery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -446,6 +470,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312151411143_init3.resx">
       <DependentUpon>202312151411143_init3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312191318543_init4.resx">
+      <DependentUpon>202312191318543_init4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312191324318_init5.resx">
+      <DependentUpon>202312191324318_init5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312191340434_init6.resx">
+      <DependentUpon>202312191340434_init6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312191349428_init7.resx">
+      <DependentUpon>202312191349428_init7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
