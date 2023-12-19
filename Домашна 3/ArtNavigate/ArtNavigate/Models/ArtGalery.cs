@@ -26,8 +26,11 @@ namespace ArtNavigate.Models
         public string AdressEnglish { get; set; }
         [DisplayName("City")]
         public string CityEnglish { get; set; }
+        public virtual List<ArtPieces> artPieces { get; set; }
 
-
-
+        public ArtGalery()
+        {
+            artPieces = new List<ArtPieces>();
+        }
     }
 }
