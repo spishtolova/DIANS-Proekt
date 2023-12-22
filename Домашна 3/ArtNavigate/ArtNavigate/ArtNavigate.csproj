@@ -356,6 +356,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AddUserRole.cs" />
     <Compile Include="Models\ArtGalery.cs" />
     <Compile Include="Models\ArtPieces.cs" />
     <Compile Include="Models\GaleryArtPiece.cs" />
@@ -443,6 +444,7 @@
     <Content Include="Views\ArtPieces\AddGalery.cshtml" />
     <Content Include="Views\ArtGaleries\Help.cshtml" />
     <Content Include="Views\ArtGaleries\HelpEnglish.cshtml" />
+    <Content Include="Views\Account\AddRoleUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
