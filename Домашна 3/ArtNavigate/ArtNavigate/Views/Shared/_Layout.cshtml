@@ -26,7 +26,12 @@
                     <li>@Html.ActionLink("Уметнички галерии", "Index", "ArtGaleries")</li>
                     <li>@Html.ActionLink("Помош", "Help", "ArtGaleries")</li>
                     <li>@Html.ActionLink("МК/EN", "IndexEnglish", "Home")</li>
-                    <li>@Html.ActionLink("Додади улога", "AddRoleUser", "Account", null, new { @class = "nav-link text-light" })</li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("Додади улога", "AddRoleUser", "Account", null, new { @class = "nav-link text-light" })</li>
+                    }
+
+
                 </ul>
                 
                 @Html.Partial("_LoginPartial")

@@ -27,6 +27,10 @@
                     <li>@Html.ActionLink("Help", "HelpEnglish", "ArtGaleries")</li>
 
                     <li>@Html.ActionLink("МК/EN", "Index", "Home")</li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("Add role", "AddRoleUser", "Account", null, new { @class = "nav-link text-light" })</li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
