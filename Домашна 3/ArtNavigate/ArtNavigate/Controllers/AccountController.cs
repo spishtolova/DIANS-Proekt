@@ -53,6 +53,25 @@ namespace ArtNavigate.Controllers
         }
 
         //
+        // ADD A ROLE TO A USER 
+        public ActionResult AddRoleUser()
+        {
+            var model = new AddUserRole();
+            model.roles.Add("Admin");
+            model.roles.Add("Editor");
+            model.roles.Add("User");
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult AddRoleUser(AddUserRole model)
+        {
+            var user = UserManager.FindByEmail(model.Email);
+            UserManager.AddToRole(user.Id, model.Role);
+
+            return RedirectToAction("Index", "ArtGaleries");
+        }
+
+        //
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
