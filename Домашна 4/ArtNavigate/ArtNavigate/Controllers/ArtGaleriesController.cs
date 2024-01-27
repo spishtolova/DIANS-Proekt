@@ -17,33 +17,36 @@ namespace ArtNavigate.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: ArtGaleries
+        // GET: ArtGaleries page in macedonian along with the search query
         public ActionResult Index(string search)
         {
             var galeries = db.ArtGaleries.Where(x => x.Name.Contains(search) || x.Adress.Contains(search) || x.City.Contains(search)  || search == null).ToList();
             return View(galeries);
         }
+        // GET: ArtGaleries page in english along with the search query
         public ActionResult IndexEnglish(string search)
         {
             var galeries = db.ArtGaleries.Where(x => x.NameEnglish.Contains(search) || x.AdressEnglish.Contains(search) || x.CityEnglish.Contains(search) || search == null).ToList();
             return View(galeries);
         }
+        // GET: Help page in macedonian
         public ActionResult Help()
         {
             
             return View();
         }
+        // GET: Help page in english
         public ActionResult HelpEnglish()
         {
 
             return View();
         }
-
+        // GET: Import from excell page to fill the database
         public ActionResult Import()
         {
             return View();
         }
-
+        // POST: Import the excell file to the database
         [HttpPost]
         public ActionResult Import(HttpPostedFileBase file)
         {
@@ -97,7 +100,7 @@ namespace ArtNavigate.Controllers
         
 
 
-        // GET: ArtGaleries/Details/5
+        // GET: ArtGaleries/Details/5 in macedonian
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -111,6 +114,7 @@ namespace ArtNavigate.Controllers
             }
             return View(artGalery);
         }
+        // GET: ArtGaleries/Details/5 in english
         public ActionResult DetailsEnglish(int? id)
         {
             if (id == null)
@@ -125,7 +129,7 @@ namespace ArtNavigate.Controllers
             return View(artGalery);
         }
 
-        // GET: ArtGaleries/Create
+        // GET: ArtGaleries/Create 
         public ActionResult Create()
         {
             return View();

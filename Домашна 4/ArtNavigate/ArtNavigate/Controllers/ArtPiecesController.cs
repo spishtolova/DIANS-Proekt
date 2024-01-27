@@ -14,7 +14,7 @@ namespace ArtNavigate.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: ArtPieces
+        // GET: ArtPieces page
         public ActionResult Index()
         {
             return View(db.ArtPieces.ToList());
