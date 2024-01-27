@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ArtNavigate.Models.ArtGalery>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEnglish.cshtml";
+}
+
+<h2>Galeries</h2>
+@using (Html.BeginForm("IndexEnglish", "ArtGaleries", FormMethod.Get, new { @class = "d-flex" }))
+{
+    @Html.TextBox("search", null, new { @class = "form-control border-end-0 border bg-light rounded-2", @placeholder = "search..." })
+
+}
+
+<p>
+    @if (User.IsInRole("Admin"))
+    {
+        @Html.ActionLink("Create New", "Create")
+    }
+
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameEnglish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdressEnglish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CityEnglish)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                
+                @Html.ActionLink(item.NameEnglish, "DetailsEnglish", new { id = item.Id })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdressEnglish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityEnglish)
+            </td>
+
+            <td>
+                @if (User.IsInRole("Admin"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                }
+                @if (User.IsInRole("Admin"))
+                {
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                }
+               
+            </td>
+        </tr>
+    }
+
+</table>
